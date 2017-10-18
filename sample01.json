@@ -1,0 +1,37 @@
+{
+  "account" : "/Compute-ouopc065/default",
+  "description" : "",
+  "tags" : [ ],
+  "name" : "/Compute-ouopc065/ora1/sample01",
+  "objects" : [ {
+    "version": 2,
+    "account" : "/Compute-ouopc065/default",
+    "desired_state" : "inherit",
+    "description" : "",
+    "persistent" : true,
+    "template" : {
+      "networking" : {
+        "eth0" : {
+          "seclists" : [ "/Compute-ouopc065/default/default", "/Compute-ouopc065/ora1/Jenny_seclist_enable_ssh" ],
+          "nat" : "ippool:/oracle/public/ippool"
+        }
+      },
+      "name" : "/Compute-ouopc065/ora1/sample01",
+      "boot_order" : [ 1 ],
+      "storage_attachments" : [ {
+        "volume" : "/Compute-ouopc065/ora1/bootable_vol2",
+        "index" : 1
+      } ],
+      "label" : "OL_6_7_UEKR3_x86_64_20171016110004",
+      "shape" : "oc3",
+      "imagelist" : "/oracle/public/OL_6.7_UEKR3_x86_64",
+      "sshkeys" : [ "/Compute-ouopc065/ora1/mykey2" ]
+    },
+    "label" : "OL_6_7_UEKR3_x86_64_20171016110004_instance",
+    "orchestration" : "/Compute-ouopc065/ora1/sample01",
+    "type" : "Instance",
+    "name" : "/Compute-ouopc065/ora1/sample01/instance"
+  } ],
+  "version": 2,
+  "desired_state" : "inactive"
+}
