@@ -1,0 +1,53 @@
+{
+  "account" : "/Compute-ouopc065/default",
+  "description" : "",
+  "tags" : [ ],
+  "name" : "/Compute-ouopc065/ora1/dev01",
+  "objects" : [ {
+    "account" : "/Compute-ouopc065/default",
+    "desired_state" : "inherit",
+    "description" : "",
+    "persistent" : true,
+    "template" : {
+      "managed" : true,
+      "name" : "/Compute-ouopc065/ora1/dev01_storage",
+      "bootable" : true,
+      "shared" : false,
+      "imagelist" : "/oracle/public/OL_7.2_UEKR4_x86_64",
+      "properties" : [ "/oracle/public/storage/default" ],
+      "size" : "30G"
+    },
+    "label" : "OL_7_2_UEKR4_x86_64_20171022005322_storage_1",
+    "orchestration" : "/Compute-ouopc065/ora1/dev01",
+    "type" : "StorageVolume",
+    "name" : "/Compute-ouopc065/ora1/dev01/dev01_storage"
+  }, {
+    "account" : "/Compute-ouopc065/default",
+    "desired_state" : "inherit",
+    "description" : "",
+    "persistent" : true,
+    "template" : {
+      "networking" : {
+        "eth0" : {
+          "seclists" : [ "/Compute-ouopc065/default/default", "/Compute-ouopc065/ora1/Jenny_seclist_enable_ssh" ],
+          "nat" : "ipreservation:/Compute-ouopc065/ora1/dev"
+        }
+      },
+      "name" : "/Compute-ouopc065/ora1/dev01",
+      "boot_order" : [ 1 ],
+      "storage_attachments" : [ {
+        "volume" : "{{OL_7_2_UEKR4_x86_64_20171022005322_storage_1:name}}",
+        "index" : 1
+      } ],
+      "label" : "OL_7_2_UEKR4_x86_64_20171022005322",
+      "shape" : "oc3",
+      "imagelist" : "/oracle/public/OL_7.2_UEKR4_x86_64",
+      "sshkeys" : [ "/Compute-ouopc065/ora1/mykey2" ]
+    },
+    "label" : "OL_7_2_UEKR4_x86_64_20171022005322_instance",
+    "orchestration" : "/Compute-ouopc065/ora1/dev01",
+    "type" : "Instance",
+    "name" : "/Compute-ouopc065/ora1/dev01/instance"
+  } ],
+  "desired_state" : "inactive"
+}
