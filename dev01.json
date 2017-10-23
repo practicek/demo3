@@ -5,7 +5,7 @@
   "name" : "/Compute-ouopc065/ora1/dev01",
   "objects" : [ {
     "account" : "/Compute-ouopc065/default",
-    "desired_state" : "active",
+    "desired_state" : "inherit",
     "description" : "",
     "persistent" : true,
     "template" : {
@@ -49,5 +49,5 @@
     "type" : "Instance",
     "name" : "/Compute-ouopc065/ora1/dev01/instance"
   } ],
-  "desired_state" : "inactive"
+  "desired_state" : "active"
 }
