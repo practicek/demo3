@@ -27,6 +27,17 @@
     "description" : "",
     "persistent" : true,
     "template" : {
+      "attributes": {
+          "userdata": {
+            "pre-bootstrap": {
+              "script": [
+                "sudo yum install -y gcc python-pip python-devel openssl-devel libffi-devel",
+                "sudo curl -kL https://bootstrap.pypa.io/get-pip.py | python",
+                "sudo pip install docker-py"
+              ]
+            }
+          }
+        },
       "networking" : {
         "eth0" : {
           "seclists" : [ "/Compute-ouopc065/default/default", "/Compute-ouopc065/ora1/Jenny_seclist_enable_ssh" ],
