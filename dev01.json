@@ -5,7 +5,7 @@
   "name" : "/Compute-ouopc065/ora1/dev01",
   "objects" : [ {
     "account" : "/Compute-ouopc065/default",
-    "desired_state" : "inherit",
+    "desired_state" : "active",
     "description" : "",
     "persistent" : true,
     "template" : {
