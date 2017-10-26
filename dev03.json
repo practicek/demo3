@@ -41,7 +41,7 @@
       "networking" : {
         "eth0" : {
           "seclists" : [ "/Compute-ouopc065/default/default", "/Compute-ouopc065/ora1/Jenny_seclist_enable_ssh" ],
-          "nat" : "ipreservation:/Compute-ouopc065/ora1/dev"
+          "nat" : "ipreservation:/Compute-ouopc065/ora1/dev03_ipreservation"
         }
       },
       "name" : "/Compute-ouopc065/ora1/dev03",
