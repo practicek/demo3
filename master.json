@@ -51,7 +51,7 @@
         "index" : 1
       } ],
       "label" : "OL_7_2_UEKR4_x86_64_20171022005322",
-      "shape" : "oc1m",
+      "shape" : "oc3",
       "imagelist" : "/oracle/public/OL_7.2_UEKR4_x86_64",
       "sshkeys" : [ "/Compute-ouopc065/ora1/mykey2" ]
     },
