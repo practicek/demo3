@@ -15,7 +15,7 @@
       "shared" : false,
       "imagelist" : "/oracle/public/OL_7.2_UEKR4_x86_64",
       "properties" : [ "/oracle/public/storage/default" ],
-      "size" : "20G"
+      "size" : "15G"
     },
     "label" : "OL_7_2_UEKR4_x86_64_20171022005322_storage_1",
     "orchestration" : "/Compute-ouopc065/ora1/dev01",
